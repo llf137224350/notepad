@@ -2,10 +2,13 @@
 #include <QApplication>
 #include <QtDebug>
 #include <QDesktopWidget>
+#include <QTextCodec>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    //设置编码为utf-8
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
 
     //加载Qt标准对话框的中文翻译文件
     QTranslator translator;
