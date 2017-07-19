@@ -512,6 +512,7 @@ void MainWindow::helpSlot(){
 }
 //查找槽函数
 void MainWindow::findSlot(){
+    ui->textEdit->moveCursor(QTextCursor::Start);
     findDialog.exec();
 }
 //查找槽函数
