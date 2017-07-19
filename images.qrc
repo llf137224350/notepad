@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>app.ico</file>
+        <file>auto_line.png</file>
+    </qresource>
+</RCC>

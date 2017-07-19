@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1038</width>
+    <height>712</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/app.ico</normaloff>:/app.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QTextEdit::WidgetWidth</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1038</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionOtherSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>编辑(&amp;E)</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionRevoke"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind"/>
+    <addaction name="actionFindNext"/>
+    <addaction name="actionReplace"/>
+    <addaction name="actionGoTO"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelectAll"/>
+    <addaction name="actionTimeOrDate"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat">
+    <property name="title">
+     <string>格式(&amp;O)</string>
+    </property>
+    <addaction name="actionAutoLine"/>
+    <addaction name="actionFont"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>查看(&amp;V)</string>
+    </property>
+    <addaction name="actionStatusBar"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFormat"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="toolTip">
+    <string>gdf g</string>
+   </property>
+  </widget>
+  <action name="actionNew">
+   <property name="text">
+    <string>新建(&amp;N)</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>打开(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionOtherSave">
+   <property name="text">
+    <string>另存为(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionPageSetting">
+   <property name="text">
+    <string>页面设置(&amp;U)</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>打印(&amp;P)</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionRevoke">
+   <property name="text">
+    <string>撤销(&amp;U)</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>剪切(&amp;T)</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>复制(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>粘贴(&amp;P)</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>删除(&amp;L)</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="text">
+    <string>查找(&amp;F)</string>
+   </property>
+  </action>
+  <action name="actionFindNext">
+   <property name="text">
+    <string>查找下一个(&amp;N)</string>
+   </property>
+  </action>
+  <action name="actionReplace">
+   <property name="text">
+    <string>替换(&amp;R)</string>
+   </property>
+  </action>
+  <action name="actionGoTO">
+   <property name="text">
+    <string>转到(&amp;G)</string>
+   </property>
+  </action>
+  <action name="actionSelectAll">
+   <property name="text">
+    <string>全选(&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionTimeOrDate">
+   <property name="text">
+    <string>时间/日期(&amp;D)</string>
+   </property>
+  </action>
+  <action name="actionAutoLine">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/iamges/auto_line.png</normaloff>
+     <normalon>:/auto_line.png</normalon>:/iamges/auto_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>自动换行(&amp;W)</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="text">
+    <string>字体(&amp;F)</string>
+   </property>
+  </action>
+  <action name="actionStatusBar">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/iamges/auto_line.png</normaloff>
+     <normalon>:/auto_line.png</normalon>:/iamges/auto_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>
+状态栏(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>查看帮助(&amp;H)</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于记事本(&amp;A)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
