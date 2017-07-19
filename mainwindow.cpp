@@ -635,3 +635,36 @@ void MainWindow::dropEvent(QDropEvent *even)
         }
     }
 }
+//关闭事件
+void MainWindow::closeEvent(QCloseEvent *event){
+    //文档已经修改
+    if(ui->textEdit->document()->isModified() && !ui->textEdit->document()->isEmpty() && fileContent != ui->textEdit->document()->toPlainText()){
+        QMessageBox box(QMessageBox::Question,"记事本","是否将更改保存到 无标题");
+        box.setIcon(QMessageBox::NoIcon);
+        box.setStandardButtons (QMessageBox::Ok|QMessageBox::Ignore|QMessageBox::Cancel);
+        box.setButtonText (QMessageBox::Ok,QString("保存"));
+        box.setButtonText (QMessageBox::Ignore,QString("不保存"));
+        box.setButtonText (QMessageBox::Cancel,QString("取消"));
+        int result = box.exec();
+        if(result == QMessageBox::Ok){
+            //保存文件
+            if(fileName.isEmpty()){//新建
+                //弹出保存文件对话框
+                fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+                if(!fileName.isEmpty()){
+                    //保存文件
+                    this->saveTextToFile();
+                }
+            }else{//读取的文本
+                this->saveTextToFile();
+            }
+             event->accept();
+        }else  if(result == QMessageBox::Ignore){
+             event->accept();
+        }else{
+            event->ignore();
+        }
+    }else{
+        event->accept();
+    }
+}

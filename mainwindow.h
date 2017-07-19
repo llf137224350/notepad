@@ -132,6 +132,8 @@ private:
     void conn();
     //设置快捷键
     void setShortcut();
+    //关闭事件
+    void closeEvent(QCloseEvent *event);
 };
 
 #endif // MAINWINDOW_H
