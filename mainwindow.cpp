@@ -153,7 +153,7 @@ void MainWindow::newFileSolt(){
         if(result == QMessageBox::Ok){
             if(fileName.isEmpty()){//新建
                 //弹出保存文件对话框
-                fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+                fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::homePath(),tr("文本文件 (*.*);;"));
                 if(!fileName.isEmpty()){
                     //保存文件
                     this->saveTextToFile();
@@ -192,7 +192,7 @@ void MainWindow::exitAppSlot(){
         if(result == QMessageBox::Ok){
             if(fileName.isEmpty()){//新建
                 //弹出保存文件对话框
-                fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+                fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::homePath(),tr("文本文件 (*.*);;"));
                 if(!fileName.isEmpty()){
                     //保存文件
                     this->saveTextToFile();
@@ -212,7 +212,7 @@ void MainWindow::exitAppSlot(){
 //另存文件槽函数
 void MainWindow::saveOtherFileSlot(){
     //弹出保存文件对话框
-    fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+    fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::homePath(),tr("文本文件 (*.*);;"));
     if(!fileName.isEmpty()){
         //保存文件
         this->saveTextToFile();
@@ -223,7 +223,7 @@ void MainWindow::saveFileSlot(){
     //判断是新建还是读取的文本
     if(fileName.isEmpty()){//新建
         //弹出保存文件对话框
-        fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+        fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::homePath(),tr("文本文件 (*.*);;"));
         if(!fileName.isEmpty()){
             //保存文件
             this->saveTextToFile();
@@ -268,11 +268,11 @@ void MainWindow::openFileSlot(){
         }else  if(result == QMessageBox::Ignore){
             //不保存
             //打开文件
-            fileName = QFileDialog::getOpenFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+            fileName = QFileDialog::getOpenFileName(this, tr("打开文件"),QDir::homePath(),tr("文本文件 (*.*);;"));
             this->readFile();
         }
     }else{
-        fileName = QFileDialog::getOpenFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+        fileName = QFileDialog::getOpenFileName(this, tr("打开文件"),QDir::homePath(),tr("文本文件 (*.*);;"));
         this->readFile();
     }
 }
@@ -650,7 +650,7 @@ void MainWindow::closeEvent(QCloseEvent *event){
             //保存文件
             if(fileName.isEmpty()){//新建
                 //弹出保存文件对话框
-                fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::currentPath(),tr("文本文件 (*.*);;"));
+                fileName = QFileDialog::getSaveFileName(this, tr("打开文件"),QDir::homePath(),tr("文本文件 (*.*);;"));
                 if(!fileName.isEmpty()){
                     //保存文件
                     this->saveTextToFile();
