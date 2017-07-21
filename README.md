@@ -4,5 +4,6 @@
 * 2.支持拖拽文本进入窗口打开
 * 3.在windows下记事本的功能上增加实施字数统计功能
 * 4.提示文本是否已保存
+* 5.详情地址 https://bbs.deepin.org/forum.php?mod=viewthread&tid=142810&extra=
 
 # 注:由于开发环境在windows下，windows下一切正常，但在linux下运行时可能存在部分异常。
